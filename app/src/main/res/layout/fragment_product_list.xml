@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:refresh_pull_push="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <include
+            android:id="@+id/product_data_error_vs"
+            layout="@layout/loading_data_error_view"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <com.hacai.exchange.ui.widget.HaCaiSwipeRefreshLayout
+        android:id="@+id/product_fragment_list_hcswipe"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        refresh_pull_push:headerHeight="40"
+        refresh_pull_push:isShowFooter="true">
+
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/product_list_rv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        </android.support.v7.widget.RecyclerView>
+    </com.hacai.exchange.ui.widget.HaCaiSwipeRefreshLayout>
+</FrameLayout>

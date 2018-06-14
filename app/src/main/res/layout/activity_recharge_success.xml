@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_header" />
+
+    <ImageView
+        android:layout_width="@dimen/x80"
+        android:layout_height="@dimen/x80"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y70"
+        android:src="@mipmap/img_success" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y20"
+        android:text="@string/deal_success"
+        android:textColor="@color/edittext_color"
+        android:textSize="@dimen/text_size_18" />
+
+
+    <TextView
+        android:id="@+id/recharge_success_money_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y40"
+        android:text="已充值1,000,000.00元"
+        android:textColor="@color/bt_start_color"
+        android:textSize="@dimen/text_size_18" />
+
+    <TextView
+        android:id="@+id/withdrawals_success_date_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/y10"
+        android:text="2020-12-20 10:05:32"
+        android:textColor="@color/edittext_color_hint"
+        android:textSize="@dimen/text_size_12" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <Button
+        android:id="@+id/recharge_success_bt"
+        style="@style/common_button"
+        android:layout_marginBottom="@dimen/y77"
+        android:layout_marginTop="@dimen/y30"
+        android:shadowColor="@color/edittext_color_hint"
+        android:text="@string/i_know" />
+
+</LinearLayout>

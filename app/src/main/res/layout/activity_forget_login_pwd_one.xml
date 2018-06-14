@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/forget_pwd_one_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_header" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y10" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/colorWhite"
+            android:orientation="vertical"
+            android:paddingStart="@dimen/x20">
+
+            <include
+                android:id="@+id/forget_phone_ll"
+                layout="@layout/common_edit_item" />
+
+            <include
+                android:id="@+id/forget_code_ll"
+                layout="@layout/common_edit_item" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/forget_next_bt"
+            style="@style/common_button"
+            android:layout_marginTop="@dimen/y30"
+            android:shadowColor="@color/bt_start_color"
+            android:text="@string/next" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/password_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/payment_bg_shap_1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/payment_dialog_title_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="@dimen/y24"
+            android:text="@string/payment_dialog_title"
+            android:textColor="@color/edittext_color"
+            android:textSize="@dimen/text_size_16" />
+
+        <TextView
+            android:id="@+id/paymen_dialog_money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/text_size_16"
+            android:visibility="gone" />
+
+        <com.hacai.exchange.ui.widget.KurtEditText
+            android:id="@+id/payment_transfer_ket"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/y22" />
+
+        <TextView
+            android:id="@+id/paymeny_forget_pwd_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginEnd="@dimen/x20"
+            android:layout_marginTop="@dimen/y9"
+            android:text="@string/login_forget_password"
+            android:textColor="@color/bt_end_color"
+            android:textSize="@dimen/text_size_14" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y0.5"
+            android:layout_marginTop="@dimen/y10"
+            android:background="@color/line_color" />
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y44">
+
+            <LinearLayout
+                android:id="@+id/two_btn_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y44"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/payment_cancel_bt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:clickable="true"
+                    android:text="@string/payment_dialog_cancle"
+                    android:textColor="@color/edittext_color_hint"
+                    android:textSize="@dimen/text_size_16" />
+
+                <View
+                    android:layout_width="@dimen/x0.5"
+                    android:layout_height="@dimen/y15"
+                    android:layout_gravity="center_vertical"
+                    android:background="@color/line_color" />
+
+                <Button
+                    android:id="@+id/payment_confirm_bt"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_gravity="right"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:text="@string/payment_dialog_comfirm"
+                    android:textColor="@color/bt_end_color"
+                    android:textSize="@dimen/text_size_17"
+                    android:textStyle="normal" />
+            </LinearLayout>
+        </FrameLayout>
+    </LinearLayout>
+
+</RelativeLayout>

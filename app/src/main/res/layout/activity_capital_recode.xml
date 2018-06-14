@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorWhite">
+
+        <com.androidkun.xtablayout.XTabLayout
+            android:id="@+id/capital_recode_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y44"
+            android:layout_marginEnd="@dimen/x50"
+            android:layout_marginStart="@dimen/x50"
+            app:xTabBackgroundColor="@color/colorWhite"
+            app:xTabDisplayNum="3"
+            app:xTabIndicatorColor="@color/bt_end_color"
+            app:xTabIndicatorHeight="@dimen/y2"
+            app:xTabIndicatorWidth="@dimen/x30"
+            app:xTabSelectedTextColor="@color/bt_end_color"
+            app:xTabSelectedTextSize="@dimen/text_size_16"
+            app:xTabTextColor="@color/text_normal_color"
+            app:xTabTextSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/capital_recode_vp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y10" />
+</LinearLayout>

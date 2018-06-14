@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+    <com.hacai.exchange.ui.widget.NoPasteEdit
+        android:id="@+id/et"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@null"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:inputType="number"
+        android:longClickable="false"/>
+    <!--  android:digits="0123456789" -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/y40"
+        android:layout_marginLeft="@dimen/x18"
+        android:layout_marginRight="@dimen/x18"
+        android:background="@drawable/shape_input_area"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@mipmap/img_password"
+                android:visibility="invisible"/>
+
+            <View
+                android:layout_width="@dimen/x0.5"
+                android:layout_height="match_parent"
+                android:background="@color/edittext_color"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@mipmap/img_password"
+                android:visibility="invisible"/>
+
+            <View
+                android:layout_width="@dimen/x0.5"
+                android:layout_height="match_parent"
+                android:background="@color/edittext_color"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@mipmap/img_password"
+                android:visibility="invisible"/>
+
+            <View
+                android:layout_width="@dimen/x0.5"
+                android:layout_height="match_parent"
+                android:background="@color/edittext_color"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv4"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@mipmap/img_password"
+                android:visibility="invisible"/>
+
+            <View
+                android:layout_width="@dimen/x0.5"
+                android:layout_height="match_parent"
+                android:background="@color/edittext_color"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv5"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@mipmap/img_password"
+                android:visibility="invisible"/>
+
+            <View
+                android:layout_width="@dimen/x0.5"
+                android:layout_height="match_parent"
+                android:background="@color/edittext_color"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <ImageView
+                android:id="@+id/iv6"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="center"
+                android:src="@mipmap/img_password"
+                android:visibility="invisible"/>
+
+            <View
+                android:layout_width="@dimen/x0.5"
+                android:layout_height="match_parent"
+                android:background="@color/edittext_color"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:refresh_pull_push="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <include
+                android:id="@+id/bid_recode_data_error_vs"
+                layout="@layout/loading_data_error_view"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <com.hacai.exchange.ui.widget.HaCaiSwipeRefreshLayout
+            android:id="@+id/product_bid_recode_list_hcswipe"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none"
+            android:visibility="invisible"
+            refresh_pull_push:headerHeight="40"
+            refresh_pull_push:isShowFooter="true">
+
+            <com.hacai.exchange.ui.widget.ScrollViewListener
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+
+                    <View style="@style/common_edit_line" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y44"
+                        android:background="@color/colorWhite"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/x20"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="@string/investment_person_num"
+                                android:textColor="@color/text_normal_color"
+                                android:textSize="@dimen/text_size_13" />
+
+                            <TextView
+                                android:id="@+id/product_bid_recode_people_num_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/bt_start_color"
+                                android:textSize="@dimen/text_size_13" />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/x20"
+                            android:layout_weight="1"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:text="@string/investment_money_total"
+                                android:textColor="@color/text_normal_color"
+                                android:textSize="@dimen/text_size_13" />
+
+                            <TextView
+                                android:id="@+id/product_bid_recode_total_money_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_vertical"
+                                android:textColor="@color/bt_start_color"
+                                android:textSize="@dimen/text_size_13" />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y44"
+                        android:layout_marginTop="@dimen/y10"
+                        android:background="@color/colorWhite"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginStart="@dimen/x20"
+                            android:text="@string/investment_person"
+                            android:textColor="@color/edittext_color"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_gravity="center_vertical"
+                            android:layout_marginEnd="@dimen/x20"
+                            android:text="@string/investment_money"
+                            android:textColor="@color/edittext_color"
+                            android:textSize="@dimen/text_size_14" />
+
+                    </RelativeLayout>
+
+                    <View style="@style/common_edit_line" />
+
+                    <com.hacai.exchange.ui.widget.MyRecycleView
+                        android:id="@+id/product_detail_bid_rv"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorWhite" />
+                </LinearLayout>
+            </com.hacai.exchange.ui.widget.ScrollViewListener>
+        </com.hacai.exchange.ui.widget.HaCaiSwipeRefreshLayout>
+    </FrameLayout>
+</LinearLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color">
+
+    <LinearLayout
+        android:id="@+id/product_frgment_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <android.support.design.widget.AppBarLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y44"
+            android:background="@color/colorWhite"
+            app:elevation="0dp">
+
+            <com.androidkun.xtablayout.XTabLayout
+                android:id="@+id/tab_layout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="@dimen/x50"
+                android:layout_marginStart="@dimen/x50"
+                app:xTabBackgroundColor="@color/colorWhite"
+                app:xTabDisplayNum="3"
+                app:xTabIndicatorColor="@color/bt_end_color"
+                app:xTabIndicatorHeight="@dimen/y2"
+                app:xTabIndicatorWidth="@dimen/x30"
+                app:xTabPaddingBottom="0dp"
+                app:xTabSelectedTextColor="@color/bt_end_color"
+                app:xTabSelectedTextSize="@dimen/text_size_16"
+                app:xTabTextColor="@color/text_normal_color"
+                app:xTabTextSize="@dimen/text_size_16" />
+        </android.support.design.widget.AppBarLayout>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/product_vp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</RelativeLayout>

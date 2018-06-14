@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y18"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/y18">
+
+        <TextView
+            android:id="@+id/capital_status_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/edittext_color"
+            android:textSize="@dimen/text_size_14" />
+
+
+        <TextView
+            android:id="@+id/capital_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/capital_status_name_tv"
+            android:layout_marginTop="@dimen/y10"
+            android:textColor="@color/edittext_color_hint"
+            android:textSize="@dimen/text_size_12" />
+
+
+        <TextView
+            android:id="@+id/capital_money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="@dimen/y20"
+            android:textColor="@color/edittext_color"
+            android:textSize="@dimen/text_size_16" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/capital_recode_bottom_line"
+        style="@style/common_edit_line"
+        android:background="@color/line_color" />
+</LinearLayout>

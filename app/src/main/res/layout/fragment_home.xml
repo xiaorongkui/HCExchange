@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:refresh_pull_push="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color">
+
+
+    <FrameLayout
+        android:id="@+id/home_frgment_fl"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.hacai.exchange.ui.widget.HaCaiSwipeRefreshLayout
+            android:id="@+id/home_fragment_hcswipe_refresh"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            refresh_pull_push:headerHeight="60"
+            refresh_pull_push:isShowFooter="false">
+
+            <com.hacai.exchange.ui.widget.ScrollViewListener
+                android:id="@+id/home_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:id="@+id/home_ll"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.hacai.exchange.ui.widget.AutoRollLayout
+                            android:id="@+id/home_auto_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/y180" />
+                    </FrameLayout>
+
+                    <GridView
+                        android:id="@+id/home_introduce_gv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@color/colorWhite"
+                        android:clickable="false"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="3"
+                        android:paddingBottom="@dimen/y20"
+                        android:paddingTop="@dimen/y20"
+                        android:scrollbars="horizontal" />
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1">
+
+                        <RelativeLayout
+                            android:id="@+id/home_data_error_rl"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="@dimen/y50"
+                            android:gravity="center_vertical">
+
+                            <include
+                                android:id="@+id/home_data_error_vs"
+                                layout="@layout/loading_data_error_view"
+                                android:visibility="invisible" />
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:id="@+id/home_show_data_ll"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical"
+                            android:visibility="invisible">
+
+                            <com.hacai.exchange.ui.widget.WrapContentHeightViewPager
+                                android:id="@+id/home_new_producet_vp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/x10"
+                                android:layout_marginStart="@dimen/x10"
+                                android:layout_marginTop="@dimen/y10" />
+
+                            <TextView
+                                android:id="@+id/home_hot_product_notice_title_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/y5"
+                                android:layout_marginStart="@dimen/x20"
+                                android:layout_marginTop="@dimen/y10"
+                                android:text="@string/product_buying"
+                                android:textColor="@color/text_normal_color"
+                                android:textSize="@dimen/text_size_13" />
+
+                            <android.support.v7.widget.RecyclerView
+                                android:id="@+id/home_buying_rv"
+                                android:layout_width="match_parent"
+                                android:layout_height="0dp"
+                                android:layout_marginTop="@dimen/y10"
+                                android:layout_weight="1" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center_horizontal"
+                                android:layout_marginBottom="@dimen/y21"
+                                android:layout_marginTop="@dimen/y10"
+                                android:text="@string/investment_notice"
+                                android:textColor="@color/edittext_color_hint"
+                                android:textSize="@dimen/text_size_12" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+                </LinearLayout>
+
+            </com.hacai.exchange.ui.widget.ScrollViewListener>
+        </com.hacai.exchange.ui.widget.HaCaiSwipeRefreshLayout>
+
+        <LinearLayout
+            android:id="@+id/home_header_status_ll"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <View
+                android:id="@+id/home_status_bar_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:background="@color/bt_start_color" />
+
+            <FrameLayout
+                android:id="@+id/home_header_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y44">
+
+                <View
+                    android:id="@+id/home_header_bg_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/colorWhite"
+                    android:paddingBottom="@dimen/x5" />
+
+                <ImageView
+                    android:id="@+id/home_header_iv"
+                    android:layout_width="@dimen/x53"
+                    android:layout_height="@dimen/y22"
+                    android:layout_gravity="center"
+                    android:scaleType="fitXY"
+                    android:src="@mipmap/img_home_logo" />
+
+                <ImageView
+                    android:id="@+id/home_msg_iv"
+                    android:layout_width="@dimen/x24"
+                    android:layout_height="@dimen/y22"
+                    android:layout_gravity="end|center_vertical"
+                    android:layout_marginEnd="@dimen/x15"
+                    android:visibility="gone" />
+
+            </FrameLayout>
+
+            <View
+                android:id="@+id/home_header_line_view"
+                style="@style/common_edit_line" />
+        </LinearLayout>
+    </FrameLayout>
+
+</LinearLayout>

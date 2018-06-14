@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorWhite"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="@dimen/x20"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/y20">
+
+        <TextView
+            android:id="@+id/investment_recode_name_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/edittext_color"
+            android:textSize="@dimen/text_size_14"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/investment_recode_right_iv"
+            android:layout_width="@dimen/x10"
+            android:layout_height="@dimen/y18"
+            android:layout_alignParentEnd="true"
+            android:src="@mipmap/icon_arrow"
+            android:visibility="invisible" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/y20"
+        android:layout_marginStart="@dimen/x20"
+        android:layout_marginTop="@dimen/y20">
+
+        <TextView
+            android:id="@+id/investment_money_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/investment_money"
+            android:textColor="@color/text_normal_color"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/investment_money_show_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x15"
+            android:layout_toEndOf="@+id/investment_money_tv"
+            android:textColor="@color/edittext_color"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/investment_profit_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/investment_money_tv"
+            android:layout_marginTop="@dimen/y10"
+            android:text="@string/investment_profit"
+            android:textColor="@color/text_normal_color"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/investment_profit_show_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/investment_profit_tv"
+            android:layout_marginStart="@dimen/x15"
+            android:layout_marginTop="@dimen/y10"
+            android:layout_toEndOf="@+id/investment_profit_tv"
+            android:textColor="@color/edittext_color"
+            android:textSize="@dimen/text_size_14" />
+
+        <View
+            android:id="@+id/investment_line"
+            android:layout_width="@dimen/y1"
+            android:layout_height="@dimen/x30"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="@dimen/x179"
+            android:layout_toEndOf="@+id/investment_money_tv"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/investment_repayment_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_toEndOf="@+id/investment_line"
+            android:text="@string/investment_repayment_date"
+            android:textColor="@color/text_normal_color"
+            android:textSize="@dimen/text_size_13" />
+
+        <TextView
+            android:id="@+id/investment_repayment_date_show_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/investment_profit_tv"
+            android:layout_below="@+id/investment_repayment_date_tv"
+            android:layout_marginStart="@dimen/x20"
+            android:layout_marginTop="@dimen/y10"
+            android:layout_toEndOf="@+id/investment_line"
+            android:textColor="@color/bt_end_color"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/investment_recode_bottom_line"
+        style="@style/common_edit_line"
+        android:background="@color/line_color" />
+</LinearLayout>

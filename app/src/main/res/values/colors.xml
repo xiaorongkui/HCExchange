@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorWhite_80">#80FFFFFF</color>
+    <color name="colorBlack">#000000</color>
+    <color name="colorBlack_10">#1A000000</color>
+    <color name="colorBlue">#4990E2</color>
+    <color name="transfer_color">#00FFFFFF</color>
+
+    <color name="edittext_color">#FF42403E</color>
+    <color name="edittext_color_hint">#BCBCBC</color>
+    <color name="edittext_color_hint_1">#FFE7E7E7</color>
+    <color name="line_color">#FFF4F4F4</color>
+    <color name="bt_start_color">#FFFFA224</color>
+    <color name="bt_end_color">#FFFF6910</color>
+    <color name="bt_end_color_30">#4DFF6910</color>
+    <color name="bt_end_color_hide">#4DFF6910</color>
+    <color name="text_normal_color">#FF767676</color>
+    <color name="text_normal_hint_color">#FFBCBCBC</color>
+    <color name="text_normal_hint_color1">#ff999999</color>
+
+    <color name="home_button_unselected">#060606</color>
+    <color name="toast_backgrounde">#99000000</color>
+    <color name="home_background">#0D42403E</color>
+
+</resources>

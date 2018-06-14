@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color">
+
+    <LinearLayout
+        android:id="@+id/loading_data_error_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:id="@+id/error_error_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:layout_width="@dimen/y90"
+                android:layout_height="@dimen/x71"
+                android:src="@mipmap/img_error" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y25"
+                android:text="@string/data_error_try"
+                android:textColor="@color/text_normal_color"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loading_data_empty_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <View
+            android:id="@+id/loading_data_empty_view_1"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="2" />
+
+        <LinearLayout
+            android:id="@+id/error_empty_ll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/loading_data_empty_iv"
+                android:layout_width="@dimen/y90"
+                android:layout_height="@dimen/x71"
+                android:src="@mipmap/img_blank" />
+
+            <TextView
+                android:id="@+id/loading_data_error_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y25"
+                android:text="@string/data_empty_try"
+                android:textColor="@color/text_normal_color"
+                android:textSize="@dimen/text_size_16" />
+        </LinearLayout>
+
+        <View
+            android:id="@+id/loading_data_empty_view_2"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/loading_data_expect_ll"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:visibility="invisible">
+
+        <ImageView
+            android:id="@+id/loading_data_expect_iv"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/y275"
+            android:layout_marginEnd="@dimen/x10"
+            android:layout_marginStart="@dimen/x10"
+            android:layout_marginTop="@dimen/y10"
+            android:src="@mipmap/img_comingsoon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/y21"
+            android:layout_marginTop="@dimen/y10"
+            android:text="@string/investment_notice"
+            android:textColor="@color/edittext_color_hint"
+            android:textSize="@dimen/text_size_12" />
+    </LinearLayout>
+</FrameLayout>

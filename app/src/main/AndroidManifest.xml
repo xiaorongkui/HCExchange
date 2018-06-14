@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.hacai.exchange">
+
+    <uses-sdk
+        android:minSdkVersion="19"
+        android:targetSdkVersion="26" />
+    <!--屏幕适配设置-->
+    <supports-screens
+        android:anyDensity="true"
+        android:largeScreens="true"
+        android:normalScreens="true"
+        android:smallScreens="true" />
+
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
+    <uses-permission
+        android:name="android.permission.INSTALL_PACKAGES"
+        tools:ignore="ProtectedPermissions" />
+
+    <uses-permission android:name="android.permission.RESTART_PACKAGES" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+
+    <application
+        android:name=".HCExchangeApp"
+        android:allowBackup="true"
+        android:configChanges="orientation|screenSize|keyboardHidden"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/icon_hacai_android"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/img_login_logo"
+        android:screenOrientation="portrait"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <!--glide图片缓存配置-->
+        <meta-data
+            android:name="com.hacai.exchange.base.BaseCachingGlideModule"
+            android:value="GlideModule" />
+        <!--友盟统计的配置-->
+        <!--<meta-data-->
+        <!--android:name="UMENG_APPKEY"-->
+        <!--android:value="5a4ae56ff43e48267f0000ed" />-->
+        <!--<meta-data-->
+        <!--android:name="UMENG_CHANNEL"-->
+        <!--android:value="${UMENG_CHANNEL_VALUE}" />-->
+
+        <activity
+            android:name=".MainActivity"
+            android:configChanges="orientation|screenSize|keyboardHidden"
+            android:launchMode="singleTask"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".module.login.view.SplashActivity"
+            android:launchMode="singleTop"
+            android:noHistory="true"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module.login.view.WelcomeGuideActivity"
+            android:launchMode="singleTop"
+            android:screenOrientation="portrait"
+            android:theme="@style/StartAppTheme" />
+
+        <service android:name=".module.login.service.UpGradeService" />
+        <service android:name=".module.login.service.TimeoutService" />
+        <service android:name=".module.login.service.FocusUpGradeService" />
+
+        <activity
+            android:name=".module.login.view.LoginActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.login.view.RegisterActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.login.view.ForgetPwdFristActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.login.view.ForgetPwdSecondActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.home.view.ProductDetailActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.home.view.ProductDetailSummaryActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.home.view.ProductDetailCapitalActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.home.view.ProductDetailBidRecodeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.PersonSettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.BindCardInitActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.BindCardActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.LoginPwdModiftyActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.WithdrawalsActivity"
+            android:launchMode="singleTop"
+            android:windowSoftInputMode="stateHidden|adjustResize" />
+        <activity
+            android:name=".module.myAccount.view.RechargeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.InvestmentRecodeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.CapitalRecodeActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.WithDrawSuccessActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.home.view.PaymentActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.ExchangePwdForgetOneActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.ExchangePwdForgetTwoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.ExchangePwdSettingActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.RiskAssessmentActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.BankChannelActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.BankCardInfoActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.RechargeSuccessActivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.home.view.ShowPDFActivity"
+            android:launchMode="singleTop"
+            android:noHistory="true" />
+        <activity
+            android:name=".module.more.view.HelpWebAcitivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.RechargeWebViewAcitivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.ExchangeModiftyPwdActivity"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".module.more.view.AboutUsWebAcitivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.login.view.RegisterAgreementAcitivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.myAccount.view.BindCardAgreementAcitivity"
+            android:launchMode="singleTop" />
+        <activity
+            android:name=".module.home.view.LoanAgreementAcitivity"
+            android:launchMode="singleTop" />
+
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="com.hacai.exchange.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths" />
+        </provider>
+    </application>
+
+</manifest>

@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/line_color"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/product_detail_header"
+        layout="@layout/common_header" />
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center">
+
+            <include
+                android:id="@+id/product_data_error_vs"
+                layout="@layout/loading_data_error_view"
+                android:visibility="invisible" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/product_detail_show_ll"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:visibility="invisible">
+
+            <com.hacai.exchange.ui.widget.ScrollViewListener
+                android:id="@+id/product_detail_scroll_view"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:descendantFocusability="blocksDescendants"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/product_detail_bg_shape">
+
+                        <TextView
+                            android:id="@+id/product_detail_expect_income_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/y21"
+                            android:text="@string/year_rate_expect"
+                            android:textColor="@color/colorWhite"
+                            android:textSize="@dimen/text_size_14" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/product_detail_expect_income_tv"
+                            android:layout_marginBottom="@dimen/y44"
+                            android:layout_marginTop="@dimen/y9"
+                            android:gravity="center_horizontal|bottom"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/product_detail_expect_income_show_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:text="12.88%"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_36" />
+
+                            <TextView
+                                android:id="@+id/product_detail_year_rate_give_tv"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/colorWhite"
+                                android:textSize="@dimen/text_size_16" />
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/product_detail_cv"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="@dimen/x10"
+                        android:layout_marginStart="@dimen/x10"
+                        android:background="@color/colorWhite"
+                        app:cardCornerRadius="@dimen/x5">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/y20"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/product_total_money"
+                                    android:textColor="@color/text_normal_color"
+                                    android:textSize="@dimen/text_size_13" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/product_deadline"
+                                    android:textColor="@color/text_normal_color"
+                                    android:textSize="@dimen/text_size_13" />
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="@string/product_investment_money"
+                                    android:textColor="@color/text_normal_color"
+                                    android:textSize="@dimen/text_size_13" />
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/y10"
+                                android:orientation="horizontal">
+
+                                <TextView
+                                    android:id="@+id/product_detail_total_money_tv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="100"
+                                    android:textColor="@color/edittext_color"
+                                    android:textSize="@dimen/text_size_24" />
+
+                                <TextView
+                                    android:id="@+id/product_detail_limit_date_tv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="30"
+                                    android:textColor="@color/edittext_color"
+                                    android:textSize="@dimen/text_size_24" />
+
+                                <TextView
+                                    android:id="@+id/product_detail_start_money_tv"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:text="100"
+                                    android:textColor="@color/edittext_color"
+                                    android:textSize="@dimen/text_size_24" />
+                            </LinearLayout>
+
+                            <ProgressBar
+                                android:id="@+id/product_detail_list_prg_bar"
+                                style="@style/progressBarHorizontal_color"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginEnd="@dimen/x20"
+                                android:layout_marginStart="@dimen/x20"
+                                android:layout_marginTop="@dimen/y20"
+                                android:max="100"
+                                android:progress="60" />
+
+                            <RelativeLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginBottom="@dimen/y20"
+                                android:layout_marginEnd="@dimen/x20"
+                                android:layout_marginStart="@dimen/x20"
+                                android:layout_marginTop="@dimen/y10">
+
+                                <TextView
+                                    android:id="@+id/product_detail_available_acnaccount_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="center"
+                                    android:text="可投0万元"
+                                    android:textColor="@color/text_normal_color"
+                                    android:textSize="@dimen/text_size_13" />
+
+                                <TextView
+                                    android:id="@+id/product_detail_percent_bar_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_alignParentEnd="true"
+                                    android:gravity="center"
+                                    android:text="已投10%"
+                                    android:textColor="@color/text_normal_color"
+                                    android:textSize="@dimen/text_size_13" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/y10"
+                        android:background="@color/colorWhite">
+
+                        <TextView
+                            android:id="@+id/investment_cycle_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/y20"
+                            android:layout_marginTop="@dimen/y20"
+                            android:text="@string/investment_cycle"
+                            android:textColor="@color/edittext_color"
+                            android:textSize="@dimen/text_size_14"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/investment_cycle_tv"
+                            android:layout_marginBottom="@dimen/y12"
+                            android:layout_marginEnd="@dimen/x20"
+                            android:layout_marginStart="@dimen/x20"
+                            android:layout_marginTop="@dimen/y24">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <RelativeLayout
+                                    android:id="@+id/progress_line_1"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <View
+                                        android:id="@+id/investment_cycle_line_1"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/y1"
+                                        android:layout_centerVertical="true"
+                                        android:background="@color/line_color" />
+
+                                    <ImageView
+                                        android:id="@+id/investment_cycle_iv_1"
+                                        android:layout_width="@dimen/x7"
+                                        android:layout_height="@dimen/y7"
+                                        android:layout_centerInParent="true"
+                                        android:scaleType="fitXY"
+                                        android:src="@mipmap/progress_dot_def" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/buy_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/progress_line_1"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/y18"
+                                    android:text="@string/buy"
+                                    android:textColor="@color/text_normal_color"
+                                    android:textSize="@dimen/text_size_14" />
+
+                                <TextView
+                                    android:id="@+id/buy_date_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/buy_tv"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/y12"
+                                    android:textColor="@color/text_normal_hint_color"
+                                    android:textSize="@dimen/text_size_12" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <RelativeLayout
+                                    android:id="@+id/progress_line_2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <View
+                                        android:id="@+id/investment_cycle_line_2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/y1"
+                                        android:layout_centerVertical="true"
+                                        android:background="@color/line_color" />
+
+                                    <ImageView
+                                        android:id="@+id/investment_cycle_iv_2"
+                                        android:layout_width="@dimen/x7"
+                                        android:layout_height="@dimen/y7"
+                                        android:layout_centerInParent="true"
+                                        android:scaleType="fitXY"
+                                        android:src="@mipmap/progress_dot_def" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/start_interest_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/progress_line_2"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/y18"
+                                    android:text="@string/start_interest"
+                                    android:textColor="@color/text_normal_color"
+                                    android:textSize="@dimen/text_size_14" />
+
+                                <TextView
+                                    android:id="@+id/start_interest_date_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/start_interest_tv"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/y12"
+                                    android:text="2019/01/05"
+                                    android:textColor="@color/text_normal_hint_color"
+                                    android:textSize="@dimen/text_size_12" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <RelativeLayout
+                                    android:id="@+id/progress_line_3"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <View
+                                        android:id="@+id/investment_cycle_line_3"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/y1"
+                                        android:layout_centerVertical="true"
+                                        android:background="@color/line_color" />
+
+                                    <ImageView
+                                        android:id="@+id/investment_cycle_iv_3"
+                                        android:layout_width="@dimen/x7"
+                                        android:layout_height="@dimen/y7"
+                                        android:layout_centerInParent="true"
+                                        android:scaleType="fitXY"
+                                        android:src="@mipmap/progress_dot_def" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/interest_end_time_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/progress_line_3"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/y18"
+                                    android:text="@string/interest_end_time"
+                                    android:textColor="@color/text_normal_color"
+                                    android:textSize="@dimen/text_size_14" />
+
+                                <TextView
+                                    android:id="@+id/interest_end_time_date_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/interest_end_time_tv"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/y12"
+                                    android:text="2019/01/05"
+                                    android:textColor="@color/text_normal_hint_color"
+                                    android:textSize="@dimen/text_size_12" />
+                            </RelativeLayout>
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1">
+
+                                <RelativeLayout
+                                    android:id="@+id/progress_line_4"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                    <View
+                                        android:id="@+id/investment_cycle_line_4"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="@dimen/y1"
+                                        android:layout_centerVertical="true"
+                                        android:background="@color/line_color" />
+
+                                    <ImageView
+                                        android:id="@+id/investment_cycle_iv_4"
+                                        android:layout_width="@dimen/x7"
+                                        android:layout_height="@dimen/y7"
+                                        android:layout_centerInParent="true"
+                                        android:scaleType="fitXY"
+                                        android:src="@mipmap/progress_dot_def" />
+                                </RelativeLayout>
+
+                                <TextView
+                                    android:id="@+id/interest_arrival_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/progress_line_4"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/y18"
+                                    android:text="@string/interest_arrival"
+                                    android:textColor="@color/text_normal_color"
+                                    android:textSize="@dimen/text_size_14" />
+
+                                <TextView
+                                    android:id="@+id/interest_arrival_date_tv"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_below="@+id/interest_arrival_tv"
+                                    android:layout_centerHorizontal="true"
+                                    android:layout_marginTop="@dimen/y12"
+                                    android:text="2019/01/05"
+                                    android:textColor="@color/text_normal_hint_color"
+                                    android:textSize="@dimen/text_size_12" />
+                            </RelativeLayout>
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/y10"
+                        android:background="@color/line_color" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:background="@color/line_color">
+
+                        <android.support.v7.widget.RecyclerView
+                            android:id="@+id/product_detail_rv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="@color/colorWhite" />
+                    </RelativeLayout>
+                </LinearLayout>
+            </com.hacai.exchange.ui.widget.ScrollViewListener>
+
+            <RelativeLayout
+                android:id="@+id/product_detail_buy_rl"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/y50"
+                android:background="@color/colorWhite">
+
+                <Button
+                    android:id="@+id/product_buy_bt"
+                    style="@style/common_button_1"
+                    android:layout_centerInParent="true"
+                    android:shadowColor="@color/edittext_color_hint"
+                    android:text="@string/product_buy" />
+            </RelativeLayout>
+        </LinearLayout>
+    </FrameLayout>
+</LinearLayout>

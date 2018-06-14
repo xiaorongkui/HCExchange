@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:background="@color/colorWhite">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:cardCornerRadius="@dimen/x5"
+        app:cardElevation="0dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/home_item_new_title_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/x20"
+                android:layout_marginTop="@dimen/y20"
+                android:textColor="@color/edittext_color"
+                android:textSize="@dimen/text_size_14"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/home_new_tag_tv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="@dimen/x20"
+                android:layout_marginTop="@dimen/y20"
+                android:text="新手专享"
+                android:textColor="@color/bt_end_color"
+                android:textSize="@dimen/text_size_12" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/y49"
+                android:descendantFocusability="blocksDescendants"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:id="@+id/year_rate_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_horizontal|bottom"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/home_new_year_rate_show_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/bt_end_color"
+                            android:textSize="@dimen/text_size_36" />
+
+                        <TextView
+                            android:id="@+id/home_new_year_rate_float_show_tv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/bt_end_color"
+                            android:textSize="@dimen/text_size_16" />
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/home_new_year_rate_float__tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/year_rate_ll"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="@dimen/y5"
+                        android:text="@string/year_rate_expect"
+                        android:textColor="@color/text_normal_color"
+                        android:textSize="@dimen/text_size_13" />
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/y20"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/home_item_deadline_date_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="10天期限"
+                        android:textColor="@color/edittext_color_hint"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/home_item_investment_start_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="100元起投"
+                        android:textColor="@color/edittext_color_hint"
+                        android:textSize="@dimen/text_size_12" />
+
+                    <TextView
+                        android:id="@+id/home_item_limit_time_tv"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="限投一次"
+                        android:textColor="@color/edittext_color_hint"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+
+                <Button
+                    android:id="@+id/home_new_immediate_buy_bt"
+                    style="@style/common_button"
+                    android:layout_marginBottom="@dimen/y20"
+                    android:layout_marginTop="@dimen/y15"
+                    android:clickable="false"
+                    android:focusable="false"
+                    android:shadowColor="@color/edittext_color_hint"
+                    android:text="@string/immediate_buy" />
+            </LinearLayout>
+        </RelativeLayout>
+    </android.support.v7.widget.CardView>
+</android.support.constraint.ConstraintLayout>

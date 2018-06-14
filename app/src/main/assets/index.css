@@ -1,0 +1,262 @@
+ @media only screen and (min-width: 320px) {
+     html {
+         font-size: 62.5% !important;
+     }
+ }
+ 
+ @media only screen and (min-width: 640px) {
+     html {
+         font-size: 125% !important;
+     }
+ }
+ 
+ @media only screen and (min-width: 750px) {
+     html {
+         font-size: 150% !important;
+     }
+ }
+ 
+ @media only screen and (min-width: 1242px) {
+     html {
+         font-size: 187.5% !important;
+     }
+ }
+ /* 安全保障 */
+ 
+ .tab li {
+     float: left;
+     list-style: none;
+     height: 40px;
+     width: 50%;
+     text-align: center;
+     line-height: 40px;
+     text-decoration: underline;
+     color: #767676;
+ }
+ 
+ .tab li a {
+     display: inline-block;
+     height: 40px;
+     width: 80px;
+     text-decoration: none;
+     color: #767676;
+     font-size: 14px;
+ }
+ 
+ .tab li .unline {
+     border-bottom: 1px solid #FF6910;
+     color: #FF6910;
+ }
+ 
+ .tab {
+     height: 40px;
+     width: 100%;
+ }
+ 
+ .tab ul {
+     background: white;
+     padding: 0;
+     margin: 0;
+     height: 40px;
+     width: 100%;
+ }
+ 
+ .changes {
+     margin-top: 10px;
+     background: white;
+ }
+ 
+ .changes .tab1 .text {
+     display: block;
+     padding: 20px 20px;
+ }
+ 
+ .changes .tab1 img {
+     width: 100%;
+ }
+ 
+ .changes h2 {
+     color: #42403E;
+     font-size: 14px;
+ }
+ 
+ .changes .tab1 p {
+     line-height: 18px;
+     font-size: 12px;
+     color: #767676;
+     text-align: justify;
+ }
+ 
+ .changes .tab2 {
+     padding: 20px 20px;
+     display: none;
+ }
+ 
+ .changes .tab2 p {
+     line-height: 18px;
+     font-size: 12px;
+     color: #767676;
+     text-align: justify;
+ }
+ /* risk */
+ 
+ .ui-content {
+     padding: 0;
+     margin: 0;
+ }
+ 
+ .ui-content h1 {
+     margin-top: 3px;
+     margin-bottom: 0;
+     text-align: center;
+     line-height: 60px;
+     height: 60px;
+     background: white;
+     font-size: 18px;
+ }
+ 
+ .ui-content .text {
+     background: white;
+     padding: 20px 20px;
+ }
+ 
+ .ui-content .text h2 {
+     font-size: 14px;
+ }
+ 
+ .ui-content .text p {
+     line-height: 18px;
+     font-size: 12px;
+     color: #767676;
+     text-align: justify;
+ }
+ 
+ .ui-content .btn div {
+     width: 295px;
+     height: 40px;
+     border-radius: 20px;
+     margin: 0 40px;
+     margin-top: 40px;
+     background: #FF6910;
+     margin: auto;
+     text-align: center;
+     line-height: 40px;
+     position: absolute;
+     left: 20px;
+     right: 20px;
+     bottom: 40px;
+     font-size: 25px;
+ }
+ 
+ .ui-content .btn div a {
+     color: white;
+     text-decoration: none;
+ }
+ /* survey */
+ 
+ .main div {
+     display: none;
+ }
+ 
+ .main .active {
+     display: block;
+ }
+ 
+ .main .p1 {
+     width: 100%;
+     height: 30px;
+     font-size: 12px;
+     text-align: left;
+     padding-left: 20px;
+     color: #BCBCBC;
+     margin-top: 10px;
+     line-height: 30px;
+ }
+ 
+ .main div span {
+     display: block;
+     width: 100%;
+ }
+ 
+ .main .p2 {
+     padding-left: 20px;
+     padding-right: 20px;
+     min-height: 50px;
+     line-height: 40px;
+     color: #42403E;
+     font-size: 16px;
+     background: white;
+     margin: 0;
+     padding-bottom: 0;
+ }
+ 
+ .main ul {
+     padding: 0;
+     background: white;
+     margin: 0;
+ }
+ 
+ .main ul li {
+     list-style: none;
+     width: 100%;
+     min-height: 50px;
+     line-height: 40px;
+ }
+ 
+ .main ul a {
+     padding-left: 40px;
+     padding-right: 40px;
+     display: block;
+     font-size: 14px;
+     text-decoration: none;
+     color: #42403E !important;
+ }
+ 
+ .main .back {
+     display: none;
+     position: absolute;
+     left: 40px;
+     bottom: 80px;
+ }
+ 
+ .bg {
+     background: #F4F4F4;
+ }
+ 
+ .main .back a {
+     text-decoration: none;
+     color: #FF6910;
+ }
+ /* 风评结果 */
+ 
+ #risk {
+     padding-top: 100px;
+     width: 100%;
+     min-height: 200px;
+ }
+ 
+ #risk p {
+     text-align: center;
+     font-size: 16px;
+     color: #42403E;
+ }
+ 
+ #risk h2 {
+     text-align: center;
+     font-size: 36px;
+     color: #FF6910;
+ }
+ 
+ #once {
+     height: 40px;
+     text-align: center;
+     font-size: 18px;
+     color: #FF6910;
+     line-height: 40px;
+     position: absolute;
+     left: 40px;
+     right: 40px;
+     bottom: 70px;
+     border: 1px solid #FF6910;
+     border-radius: 20px;
+ }

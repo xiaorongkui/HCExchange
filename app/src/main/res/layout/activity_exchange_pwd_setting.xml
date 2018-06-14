@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include layout="@layout/common_header" />
+
+    <LinearLayout
+        android:id="@+id/exchange_pwd_ll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/y10"
+        android:background="@color/colorWhite"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/x20">
+
+        <include
+            android:id="@+id/setting_exchange_pwd_ll"
+            layout="@layout/common_edit_item" />
+
+        <include
+            android:id="@+id/setting_exchange_pwd_comfire_ll"
+            layout="@layout/common_edit_item" />
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/setting_exchange_pwd_bt"
+        style="@style/common_button"
+        android:layout_marginTop="@dimen/y25"
+        android:shadowColor="@color/edittext_color_hint"
+        android:text="@string/submit" />
+</LinearLayout>
